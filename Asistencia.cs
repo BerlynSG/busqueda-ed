@@ -1,4 +1,4 @@
-class Asistencia
+public class Asistencia
 {
     public string[] nombres;
 
