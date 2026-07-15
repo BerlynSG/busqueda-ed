@@ -1,5 +1,6 @@
 public class Productos
 {
+    // Guarda los productos que están fuera de stock.
     public string[] agotados;
 
     public Productos(string[] agotados)
@@ -7,11 +8,7 @@ public class Productos
         this.agotados = agotados;
     }
 
-    public bool EstáProductoAgotado(string producto)
-    {
-        return BuscarPosicion(producto) != -1;
-    }
-
+    // Busca la posición de un producto en la lista.
     public int BuscarPosicion(string producto)
     {
         for (int i = 0; i < agotados.Length; i++)
@@ -23,6 +20,7 @@ public class Productos
         return -1;
     }
 
+    // Devuelve un mensaje simple para decir si está agotado o no.
     public string RevisarProducto(string producto)
     {
         int posicion = BuscarPosicion(producto);

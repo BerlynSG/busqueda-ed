@@ -1,5 +1,6 @@
 public class CodigosDescuento
 {
+    // Guarda los códigos de descuento disponibles.
     public int[] codigos;
 
     public CodigosDescuento(int[] codigos)
@@ -7,6 +8,7 @@ public class CodigosDescuento
         this.codigos = codigos;
     }
 
+    // Busca si un código existe en la lista.
     public int BuscarCodigo(int codigoBuscado)
     {
         int inicio = 0;
@@ -28,6 +30,7 @@ public class CodigosDescuento
         return -1;
     }
 
+    // Devuelve un mensaje según si el código es válido o no.
     public string ValidarCodigo(int codigoBuscado)
     {
         int posicion = BuscarCodigo(codigoBuscado);

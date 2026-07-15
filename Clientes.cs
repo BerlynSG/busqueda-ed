@@ -1,5 +1,6 @@
 public class Clientes
 {
+    // Guarda las cédulas del registro masivo de clientes.
     public long[] cedulas;
 
     public Clientes(long[] cedulas)
@@ -7,6 +8,7 @@ public class Clientes
         this.cedulas = cedulas;
     }
 
+    // Busca si una cédula está en la lista.
     public int BuscarCedula(long cedulaBuscada)
     {
         for (int i = 0; i < cedulas.Length; i++)
@@ -18,6 +20,7 @@ public class Clientes
         return -1;
     }
 
+    // Devuelve un mensaje simple según si la cédula existe o no.
     public string RevisarCliente(long cedulaBuscada)
     {
         int posicion = BuscarCedula(cedulaBuscada);

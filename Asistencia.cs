@@ -1,5 +1,6 @@
 public class Asistencia
 {
+    // Guarda la lista de nombres para revisar la asistencia.
     public string[] nombres;
 
     public Asistencia(string[] nombres)
@@ -8,6 +9,7 @@ public class Asistencia
     }
     
 
+    // Busca si un nombre está en la lista.
     public bool EstáPresente(string nombre)
     {
         for (int i = 0; i < nombres.Length; i++)
@@ -18,6 +20,7 @@ public class Asistencia
         return false;
     }
 
+    // Devuelve un mensaje simple según si el estudiante está o no.
     public string RevisarAsistencia(string nombre)
     {
         if (EstáPresente(nombre))

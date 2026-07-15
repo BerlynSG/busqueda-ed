@@ -1,5 +1,6 @@
 public class Calificaciones
 {
+    // Guarda la lista de calificaciones ordenadas.
     public int[] notas;
 
     public Calificaciones(int[] notas)
@@ -7,6 +8,7 @@ public class Calificaciones
         this.notas = notas;
     }
 
+    // Busca una nota en la lista de forma ordenada.
     public int BuscarNota(int notaBuscada)
     {
         int inicio = 0;
@@ -28,6 +30,7 @@ public class Calificaciones
         return -1;
     }
 
+    // Da un mensaje según si la nota aparece o no.
     public string RevisarNota(int notaBuscada)
     {
         int posicion = BuscarNota(notaBuscada);
