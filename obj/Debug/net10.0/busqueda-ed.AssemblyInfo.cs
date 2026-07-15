@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("busqueda-ed")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ca763c7475e7ec779f3052a960e471c38f73c7f0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cf70ff8a63d5c6f0018273f73af43769d3da1488")]
 [assembly: System.Reflection.AssemblyProductAttribute("busqueda-ed")]
 [assembly: System.Reflection.AssemblyTitleAttribute("busqueda-ed")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
