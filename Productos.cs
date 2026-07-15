@@ -9,11 +9,27 @@ public class Productos
 
     public bool EstáProductoAgotado(string producto)
     {
+        return BuscarPosicion(producto) != -1;
+    }
+
+    public int BuscarPosicion(string producto)
+    {
         for (int i = 0; i < agotados.Length; i++)
         {
-            if (agotados[i] == producto)
-                return true;
+            if (agotados[i].Equals(producto, StringComparison.OrdinalIgnoreCase))
+                return i;
         }
-        return false;
+
+        return -1;
+    }
+
+    public string RevisarProducto(string producto)
+    {
+        int posicion = BuscarPosicion(producto);
+
+        if (posicion != -1)
+            return $"El producto '{producto}' está agotado. Se encuentra en la posición {posicion}.";
+
+        return $"El producto '{producto}' no está agotado.";
     }
 }
