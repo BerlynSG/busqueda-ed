@@ -17,4 +17,12 @@ public class Asistencia
         }
         return false;
     }
+
+    public string RevisarAsistencia(string nombre)
+    {
+        if (EstáPresente(nombre))
+            return $"El estudiante '{nombre}' está presente.";
+        else
+            return $"El estudiante '{nombre}' no está presente.";
+    }
 }
