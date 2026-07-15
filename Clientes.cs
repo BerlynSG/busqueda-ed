@@ -23,7 +23,7 @@ public class Clientes
         int posicion = BuscarCedula(cedulaBuscada);
 
         if (posicion != -1)
-            return $"La cédula {cedulaBuscada} sí existe en el registro. Se encuentra en la posición {posicion}.";
+            return $"La cédula {cedulaBuscada} sí existe en el registro.";
 
         return $"La cédula {cedulaBuscada} no aparece en el registro masivo.";
     }

@@ -33,7 +33,7 @@ public class CodigosDescuento
         int posicion = BuscarCodigo(codigoBuscado);
 
         if (posicion != -1)
-            return $"El código {codigoBuscado} sí es válido. Se encuentra en la posición {posicion}.";
+            return $"El código {codigoBuscado} sí es válido.";
 
         return $"El código {codigoBuscado} no existe en los códigos de descuento.";
     }
