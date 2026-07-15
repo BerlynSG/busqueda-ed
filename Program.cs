@@ -26,21 +26,10 @@
         string[] nombres = { "Juan", "María", "Pedro", "Ana" };
         var asistencia = new Asistencia(nombres);
 
-        Console.WriteLine("Ingrese un nombre para verificar asistencia:");
-        string? nombre = Console.ReadLine();
+        string? nombre = LeerEntrada("Ingrese el nombre del estudiante:");
 
-        if (!string.IsNullOrWhiteSpace(nombre))
-        {
-            bool presente = asistencia.EstáPresente(nombre);
-            if (presente)
-                Console.WriteLine($"El estudiante '{nombre}' está presente.");
-            else
-                Console.WriteLine($"El estudiante '{nombre}' no está presente.");
-        }
-        else
-        {
-            Console.WriteLine("No se ingresó ningún nombre.");
-        }
+        if (nombre == string.Empty) return;
+        Console.WriteLine(asistencia.RevisarAsistencia(nombre));
     }
 
     static void RevisarProducto()
@@ -48,16 +37,22 @@
         string[] productosAgotados = { "pan", "leche", "arroz", "azúcar" };
         var productos = new Productos(productosAgotados);
 
-        Console.WriteLine("Ingrese un producto para revisar si está agotado:");
-        string? producto = Console.ReadLine();
+        string? producto = LeerEntrada("Ingrese el nombre del producto:");
 
-        if (!string.IsNullOrWhiteSpace(producto))
-        {
-            Console.WriteLine(productos.RevisarProducto(producto));
-        }
-        else
-        {
-            Console.WriteLine("No se ingresó ningún producto.");
-        }
+        if (producto == string.Empty) return;
+        Console.WriteLine(productos.RevisarProducto(producto));
     }
+
+    static string LeerEntrada(string mensaje){
+        Console.WriteLine(mensaje);
+        string? entrada = Console.ReadLine();
+
+        if (string.IsNullOrWhiteSpace(entrada))
+        {
+            Console.WriteLine("No se ingresó nada.");
+            return string.Empty;
+        }
+
+        return entrada;
+    } 
 }
