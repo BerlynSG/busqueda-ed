@@ -6,6 +6,7 @@
         Console.WriteLine("1. Revisar asistencia");
         Console.WriteLine("2. Revisar producto agotado");
         Console.WriteLine("3. Buscar calificación específica");
+        Console.WriteLine("4. Validar código de descuento");
         string? opcion = Console.ReadLine();
 
         switch (opcion)
@@ -18,6 +19,9 @@
                 break;
             case "3":
                 RevisarCalificacion();
+                break;
+            case "4":
+                RevisarCodigoDescuento();
                 break;
             default:
                 Console.WriteLine("Opción no válida.");
@@ -63,6 +67,25 @@
         else
         {
             Console.WriteLine("La calificación debe ser un número entero.");
+        }
+    }
+
+    static void RevisarCodigoDescuento()
+    {
+        int[] codigosDescuento = { 100, 200, 300, 400, 500 };
+        var codigos = new CodigosDescuento(codigosDescuento);
+
+        string? entrada = LeerEntrada("Ingrese el código de descuento:");
+
+        if (entrada == string.Empty) return;
+
+        if (int.TryParse(entrada, out int codigoBuscado))
+        {
+            Console.WriteLine(codigos.ValidarCodigo(codigoBuscado));
+        }
+        else
+        {
+            Console.WriteLine("El código debe ser un número entero.");
         }
     }
 
