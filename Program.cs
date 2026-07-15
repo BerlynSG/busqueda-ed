@@ -5,6 +5,7 @@
         Console.WriteLine("Seleccione una opción:");
         Console.WriteLine("1. Revisar asistencia");
         Console.WriteLine("2. Revisar producto agotado");
+        Console.WriteLine("3. Buscar calificación específica");
         string? opcion = Console.ReadLine();
 
         switch (opcion)
@@ -14,6 +15,9 @@
                 break;
             case "2":
                 RevisarProducto();
+                break;
+            case "3":
+                RevisarCalificacion();
                 break;
             default:
                 Console.WriteLine("Opción no válida.");
@@ -41,6 +45,25 @@
 
         if (producto == string.Empty) return;
         Console.WriteLine(productos.RevisarProducto(producto));
+    }
+
+    static void RevisarCalificacion()
+    {
+        int[] notas = { 60, 70, 80, 90, 100 };
+        var calificaciones = new Calificaciones(notas);
+
+        string? entrada = LeerEntrada("Ingrese la calificación a buscar:");
+
+        if (entrada == string.Empty) return;
+
+        if (int.TryParse(entrada, out int notaBuscada))
+        {
+            Console.WriteLine(calificaciones.RevisarNota(notaBuscada));
+        }
+        else
+        {
+            Console.WriteLine("La calificación debe ser un número entero.");
+        }
     }
 
     static string LeerEntrada(string mensaje){
