@@ -7,6 +7,7 @@
         Console.WriteLine("2. Revisar producto agotado");
         Console.WriteLine("3. Buscar calificación específica");
         Console.WriteLine("4. Validar código de descuento");
+        Console.WriteLine("5. Verificar cliente en registro masivo");
         string? opcion = Console.ReadLine();
 
         switch (opcion)
@@ -22,6 +23,9 @@
                 break;
             case "4":
                 RevisarCodigoDescuento();
+                break;
+            case "5":
+                RevisarCliente();
                 break;
             default:
                 Console.WriteLine("Opción no válida.");
@@ -86,6 +90,29 @@
         else
         {
             Console.WriteLine("El código debe ser un número entero.");
+        }
+    }
+
+    static void RevisarCliente()
+    {
+        long[] clientes = new long[1005];
+        for (int i = 0; i < clientes.Length; i++)
+        {
+            clientes[i] = 1000000000 + i;
+        }
+
+        var registro = new Clientes(clientes);
+        string? entrada = LeerEntrada("Ingrese la cédula del cliente:");
+
+        if (entrada == string.Empty) return;
+
+        if (long.TryParse(entrada, out long cedulaBuscada))
+        {
+            Console.WriteLine(registro.RevisarCliente(cedulaBuscada));
+        }
+        else
+        {
+            Console.WriteLine("La cédula debe ser un número válido.");
         }
     }
 
