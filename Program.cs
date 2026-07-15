@@ -38,6 +38,8 @@
     static void RevisarAsistencia()
     {
         string[] nombres = { "Juan", "María", "Pedro", "Ana" };
+        Console.Write("Lista de estudiantes: ");
+        Console.WriteLine(string.Join(", ", nombres));
         var asistencia = new Asistencia(nombres);
 
         string? nombre = LeerEntrada("Ingrese el nombre del estudiante:");
@@ -50,6 +52,8 @@
     static void RevisarProducto()
     {
         string[] productosAgotados = { "pan", "leche", "arroz", "azúcar" };
+        Console.Write("Productos agotados: ");
+        Console.WriteLine(string.Join(", ", productosAgotados));
         var productos = new Productos(productosAgotados);
 
         string? producto = LeerEntrada("Ingrese el nombre del producto:");
@@ -62,6 +66,8 @@
     static void RevisarCalificacion()
     {
         int[] notas = { 60, 70, 80, 90, 100 };
+        Console.Write("Notas disponibles: ");
+        Console.WriteLine(string.Join(", ", notas));
         var calificaciones = new Calificaciones(notas);
 
         string? entrada = LeerEntrada("Ingrese la calificación a buscar:");
@@ -71,17 +77,17 @@
         if (int.TryParse(entrada, out int notaBuscada))
         {
             Console.WriteLine(calificaciones.RevisarNota(notaBuscada));
+            return;
         }
-        else
-        {
-            Console.WriteLine("La calificación debe ser un número entero.");
-        }
+        Console.WriteLine("La calificación debe ser un número entero.");
     }
 
     // Valida si un código de descuento existe.
     static void RevisarCodigoDescuento()
     {
         int[] codigosDescuento = { 100, 200, 300, 400, 500 };
+        Console.Write("Códigos de descuento disponibles: ");
+        Console.WriteLine(string.Join(", ", codigosDescuento));
         var codigos = new CodigosDescuento(codigosDescuento);
 
         string? entrada = LeerEntrada("Ingrese el código de descuento:");
@@ -91,11 +97,9 @@
         if (int.TryParse(entrada, out int codigoBuscado))
         {
             Console.WriteLine(codigos.ValidarCodigo(codigoBuscado));
+            return;
         }
-        else
-        {
-            Console.WriteLine("El código debe ser un número entero.");
-        }
+        Console.WriteLine("El código debe ser un número entero.");
     }
 
     // Busca una cédula en un registro grande de clientes.
@@ -115,11 +119,9 @@
         if (long.TryParse(entrada, out long cedulaBuscada))
         {
             Console.WriteLine(registro.RevisarCliente(cedulaBuscada));
+            return;
         }
-        else
-        {
-            Console.WriteLine("La cédula debe ser un número válido.");
-        }
+        Console.WriteLine("La cédula debe ser un número válido.");
     }
 
     // Pide un dato al usuario y lo devuelve como texto.
