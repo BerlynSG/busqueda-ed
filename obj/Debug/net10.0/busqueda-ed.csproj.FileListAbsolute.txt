@@ -1,0 +1,15 @@
+/home/berlyn/Documentos/GitHub/busqueda-ed/bin/Debug/net10.0/busqueda-ed
+/home/berlyn/Documentos/GitHub/busqueda-ed/bin/Debug/net10.0/busqueda-ed.deps.json
+/home/berlyn/Documentos/GitHub/busqueda-ed/bin/Debug/net10.0/busqueda-ed.runtimeconfig.json
+/home/berlyn/Documentos/GitHub/busqueda-ed/bin/Debug/net10.0/busqueda-ed.dll
+/home/berlyn/Documentos/GitHub/busqueda-ed/bin/Debug/net10.0/busqueda-ed.pdb
+/home/berlyn/Documentos/GitHub/busqueda-ed/obj/Debug/net10.0/busqueda-ed.GeneratedMSBuildEditorConfig.editorconfig
+/home/berlyn/Documentos/GitHub/busqueda-ed/obj/Debug/net10.0/busqueda-ed.AssemblyInfoInputs.cache
+/home/berlyn/Documentos/GitHub/busqueda-ed/obj/Debug/net10.0/busqueda-ed.AssemblyInfo.cs
+/home/berlyn/Documentos/GitHub/busqueda-ed/obj/Debug/net10.0/busqueda-ed.csproj.CoreCompileInputs.cache
+/home/berlyn/Documentos/GitHub/busqueda-ed/obj/Debug/net10.0/busqueda-ed.sourcelink.json
+/home/berlyn/Documentos/GitHub/busqueda-ed/obj/Debug/net10.0/busqueda-ed.dll
+/home/berlyn/Documentos/GitHub/busqueda-ed/obj/Debug/net10.0/refint/busqueda-ed.dll
+/home/berlyn/Documentos/GitHub/busqueda-ed/obj/Debug/net10.0/busqueda-ed.pdb
+/home/berlyn/Documentos/GitHub/busqueda-ed/obj/Debug/net10.0/busqueda-ed.genruntimeconfig.cache
+/home/berlyn/Documentos/GitHub/busqueda-ed/obj/Debug/net10.0/ref/busqueda-ed.dll
